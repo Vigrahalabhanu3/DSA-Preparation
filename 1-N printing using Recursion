@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+class solution{
+
+public:
+
+void helper(int i, int n){
+
+    if(i > n){
+
+        return;
+    }
+
+    if(i % 2 == 0){
+
+        cout << i << " ";
+    }
+
+    helper(i + 1, n);
+
+    if(i % 2 != 0){
+
+        cout << i << " ";
+    }
+}
+
+void printEvenOdd(int n) {
+
+    helper(1, n);
+}
+
+};
