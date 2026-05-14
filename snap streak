@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+class solution {
+
+public:
+
+int longestStreak(string s) {
+
+    int streak = 0;
+
+    int maxi = 0;
+
+    for(auto ch : s){
+
+        if(ch == '1'){
+
+            streak++;
+
+            maxi = max(maxi, streak);
+
+        }else{
+
+            streak = 0;
+        }
+    }
+
+    return maxi;
+}
+
+};
